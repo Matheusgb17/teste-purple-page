@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+body{
+    background: url("../assets/img-BGmeuSite.jpg") fixed;
+    background-size: 100%;
+}
+
+.borda-superior {
+    height: 2.5vh;
+    background-color: rgb(8, 7, 31);
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(16, 14, 64);
+    height: 8vh;
+}
+
+main{
+    background-size: cover;
+    height: 89.5vh;
+    font-family: 'Dubai Medium', sans-serif;
+    color: whitesmoke;
+    line-height: 1.5;
+}
+
+.minha-area {
+    text-align: right;
+}
+
+.cinema {
+    padding-top: 10px;
+}
+
+.sobre-mim{
+    padding-right: 10px;
+}
+
+h1 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 22px;
+}
+
+p {
+    font-size: 25px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.p-left {
+    text-align: justify;
+}
+
+.p-centro {
+    text-align: center;
+}
+
+.grid {
+    width: 450px;
+    padding: 25px;
+}
+
+.cinema {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.line4{
+    background-color: whitesmoke;
+    height: 1px;
+}
+
+.line5 {
+    border-left: solid #fff;
+    height:16%;
+    left: 50%;
+    position: absolute;
+    margin: 4px;
+}
+
+.principal {
+    background-color: rgb(40, 40, 40);
+    padding: 4vh;
+    width: 65vw;
+    margin: auto;
+}
+
+.atuamos-naoatuamos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2em;
+}
+
+.atuamos-naoatuamos .atuamos h1{
+    margin-bottom: 4px;
+    padding-left: 0px;
+}
+
+.atuamos-naoatuamos .ul-nao-atuamos h1{
+    margin-bottom: 4px;
+    padding-left: 0px;
+}
+
+.atuamos{
+    text-align: left;
+    margin-left: 0;
+}
+
+.nao-atuamos{
+    text-align: left;
+}
+
+.ul-nao-atuamos {
+    font-size: 20px;
+    list-style: circle;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    color: whitesmoke;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 1s;
+}
+
+@media (max-width: 1199px) {
+    .grid {
+        width: 350px;
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .atuamos-naoatuamos {
+        display: block;
+        align-items: center;
+        margin: 2em;
+    }
+
+    .nao-atuamos{
+        padding-top: 2em;
+    }
+
+    .line5 {
+        border-left: solid #fff;
+        height:0;
+        left: 0;
+        position: absolute;
+        margin:0;
+    }
+}
+
+@media (max-width: 999px) {
+    body{
+        overflow-x: hidden;
+        background-size: 200%;
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 10.5vh;
+        right: 0;
+        width: 30vw;
+        height: 89.5vw;
+        background: rgb(8, 7, 48);
+        background-size: 100%;
+        opacity: 0.9;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .grid {
+        width: 325px;
+    }
+
+    .cinema {
+        padding-top: 0;
+    }
+    
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+.mobile-menu.active .Line1 {
+    transform: rotate(-45deg) translate(-7px, 8px);
+}
+
+.mobile-menu.active .Line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .Line3 {
+    transform: rotate(-135deg) translate(6px, 8px);
+}
+
